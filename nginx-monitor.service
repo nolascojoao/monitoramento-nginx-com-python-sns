@@ -1,0 +1,11 @@
+[Unit]
+Description=Nginx Monitor Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/ubuntu/nginx_monitor.py
+Restart=always
+User=ubuntu
+
+[Install]
+WantedBy=multi-user.target
